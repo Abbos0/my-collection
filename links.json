@@ -1,1 +1,6 @@
-[]
+{
+  "links": [
+    {"name": "Link 1", "url": "http://example.com"},
+    {"name": "Link 2", "url": "http://example.com"}
+  ]
+}
