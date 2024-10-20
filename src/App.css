@@ -1,6 +1,8 @@
+/* Base styling for larger screens (desktops and tablets) */
 .App {
   text-align: center;
   margin-top: 50px;
+  padding: 20px;
 }
 
 .video-player-container {
@@ -15,6 +17,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  flex-direction: column;
 }
 
 .custom-upload-button {
@@ -25,7 +28,8 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .custom-upload-button:hover {
@@ -33,7 +37,7 @@
 }
 
 #file-upload {
-  display: none; /* Asl input faylni yashirish */
+  display: none;
 }
 
 .speed-control {
@@ -47,4 +51,82 @@
 
 p {
   font-size: 18px;
+}
+
+/* Video styling */
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for different screen sizes */
+
+/* Large devices (desktops and laptops) */
+@media only screen and (min-width: 1024px) {
+  .App {
+    margin-top: 50px;
+    padding: 20px;
+  }
+
+  .custom-file-upload {
+    flex-direction: row;
+  }
+
+  .custom-upload-button {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  video {
+    width: 90%; /* Make the video take up 90% of the screen width */
+    max-width: 1000px; /* Limit the maximum width for ultra-large screens */
+  }
+}
+
+/* Tablets and medium screens */
+@media only screen and (max-width: 1023px) {
+  .App {
+    margin-top: 30px;
+    padding: 15px;
+  }
+
+  .custom-file-upload {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  video {
+    width: 100%;
+  }
+}
+
+/* Small devices (phones) */
+@media only screen and (max-width: 600px) {
+  .App {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .custom-upload-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .speed-control label {
+    font-size: 14px;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  span {
+    font-size: 14px;
+  }
 }
