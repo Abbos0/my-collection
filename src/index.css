@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Tugmalarni standart holat uchun */
+a {
+  display: inline-block; /* inline-block bo'lishi kerak */
+  text-decoration: none; /* Ustiga bosilganda chizilgan holatni olib tashlash */
+}
+
+/* Tugma hover holati uchun */
+a:hover {
+  opacity: 0.9; /* Ustiga kelinganda tugmaning ozgina shaffofligini oshirish */
+}
